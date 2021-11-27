@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_green_background"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/logo_white"
+        app:layout_constraintBottom_toTopOf="@+id/svMainLogin"
+        app:layout_constraintEnd_toStartOf="@+id/tvMainTitle"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:paddingEnd="6dp"
+        android:text="@string/title"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/svMainLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <ScrollView
+        android:id="@+id/svMainLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_white_background"
+            android:padding="45dp">
+
+            <TextView
+                android:id="@+id/tvMainLoginTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_to_your_acc"
+                android:textColor="@color/mediumDarkGreenCyan"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMainUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/username"
+                android:textColor="@color/mediumDarkGreenCyan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMainLoginTitle" />
+
+            <EditText
+                android:id="@+id/etMainUsername"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:inputType="textPersonName"
+                android:paddingStart="39dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMainUsername"
+                tools:ignore="Autofill, LabelFor, RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/ivMainUsername"
+                android:layout_width="36dp"
+                android:layout_height="48dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="12dp"
+                android:src="@drawable/ic_baseline_person_outline_green"
+                app:layout_constraintBottom_toBottomOf="@+id/etMainUsername"
+                app:layout_constraintStart_toStartOf="@+id/etMainUsername"
+                tools:ignore="ContentDescription, RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tvMainPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/password"
+                android:textColor="@color/mediumDarkGreenCyan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivMainUsername" />
+
+            <EditText
+                android:id="@+id/etMainPassword"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:inputType="textPassword"
+                android:paddingStart="39dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMainPassword"
+                tools:ignore="Autofill, LabelFor, RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/ivMainPassword"
+                android:layout_width="36dp"
+                android:layout_height="48dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="12dp"
+                android:src="@drawable/ic_outline_lock_green"
+                app:layout_constraintBottom_toBottomOf="@+id/etMainPassword"
+                app:layout_constraintStart_toStartOf="@+id/etMainPassword"
+                tools:ignore="ContentDescription, RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/acbMainLogin"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/layout_button"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etMainPassword" />
+
+            <TextView
+                android:id="@+id/tvMainCreateNewAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/create_new_account"
+                android:textColor="@color/mediumDarkGreenCyan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/acbMainLogin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

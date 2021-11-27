@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">ElectronicMoney</string>
+    <string name="create_new_account"><u>Create New Account</u></string>
+    <string name="login">Login</string>
+    <string name="login_to_your_acc">Login to Your Account</string>
+    <string name="password">Password</string>
+    <string name="title">Fundzilla</string>
+    <string name="username">Username</string>
+
+</resources>
